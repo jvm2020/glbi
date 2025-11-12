@@ -1,36 +1,78 @@
-// GLBI Calculator Logic
+// GLBI Calculator Logic - Interactive Version
 
 class GLBICalculator {
     constructor() {
+        this.currentHouseholdType = 'single';
         this.initializeEventListeners();
+        this.updateAllScenarios();
     }
 
     initializeEventListeners() {
-        const calculateBtn = document.getElementById('calculateBtn');
-        calculateBtn.addEventListener('click', () => this.calculate());
+        // Income slider
+        const slider = document.getElementById('incomeSlider');
+        const valueDisplay = document.getElementById('incomeValue');
+        
+        slider.addEventListener('input', (e) => {
+            const value = parseInt(e.target.value);
+            valueDisplay.textContent = value.toLocaleString();
+            this.updateAllScenarios();
+        });
 
-        // Also calculate on Enter key in income field
-        const incomeField = document.getElementById('annualIncome');
-        incomeField.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                this.calculate();
-            }
+        // Household type toggle
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                toggleBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const type = btn.dataset.type;
+                const householdOptions = document.querySelector('.household-options');
+                
+                if (type === 'household') {
+                    householdOptions.style.display = 'block';
+                    this.currentHouseholdType = document.getElementById('householdType').value;
+                } else {
+                    householdOptions.style.display = 'none';
+                    this.currentHouseholdType = 'single';
+                }
+                
+                this.updateAllScenarios();
+            });
+        });
+
+        // Household type dropdown
+        const householdSelect = document.getElementById('householdType');
+        householdSelect.addEventListener('change', (e) => {
+            this.currentHouseholdType = e.target.value;
+            this.updateAllScenarios();
+        });
+
+        // Province change
+        const provinceSelect = document.getElementById('province');
+        provinceSelect.addEventListener('change', () => {
+            this.updateAllScenarios();
+        });
+
+        // Disability checkbox
+        const disabilityCheckbox = document.getElementById('hasDisability');
+        disabilityCheckbox.addEventListener('change', () => {
+            this.updateAllScenarios();
         });
     }
 
-    calculate() {
-        // Get input values
-        const province = document.getElementById('province').value;
-        const householdType = document.getElementById('householdType').value;
-        const annualIncome = parseFloat(document.getElementById('annualIncome').value) || 0;
-        const reductionRate = parseInt(document.getElementById('reductionRate').value);
+    updateAllScenarios() {
+        const income = parseInt(document.getElementById('incomeSlider').value);
         const hasDisability = document.getElementById('hasDisability').checked;
+        const province = document.getElementById('province').value;
 
-        // Calculate GLBI
-        const result = this.calculateGLBI(householdType, annualIncome, reductionRate, hasDisability);
-        
-        // Display results
-        this.displayResults(result, province, householdType, annualIncome, reductionRate, hasDisability);
+        // Calculate for all three scenarios
+        [50, 25, 15].forEach(rate => {
+            const result = this.calculateGLBI(this.currentHouseholdType, income, rate, hasDisability);
+            this.updateScenarioDisplay(rate, result, income);
+        });
+
+        // Update provincial comparison
+        this.updateComparison(province, income);
     }
 
     calculateGLBI(householdType, annualIncome, reductionRate, hasDisability) {
@@ -45,7 +87,6 @@ class GLBICalculator {
         const reduction = annualIncome * reductionPercentage;
         
         // Calculate GLBI payment (base - reduction + disability)
-        // The disability amount is NOT reduced by income
         const glbiPayment = Math.max(0, baseAmount - reduction) + disabilityAmount;
         
         // Calculate total annual income
@@ -64,88 +105,54 @@ class GLBICalculator {
         };
     }
 
-    displayResults(result, province, householdType, annualIncome, reductionRate, hasDisability) {
-        // Show results section
-        const resultsSection = document.getElementById('resultsSection');
-        resultsSection.style.display = 'block';
-        
-        // Scroll to results
-        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
-        // Update result values
-        document.getElementById('totalIncome').textContent = formatCurrency(result.totalIncome);
-        document.getElementById('glbiPayment').textContent = formatCurrency(result.glbiPayment);
-        document.getElementById('monthlyPayment').textContent = formatCurrency(result.monthlyPayment);
-        document.getElementById('baseAmount').textContent = formatCurrency(result.baseAmount);
-        document.getElementById('reductionAmount').textContent = '-' + formatCurrency(result.reduction);
-        
-        // Show/hide disability amount
-        const disabilityDisplay = document.getElementById('disabilityAmountDisplay');
-        if (hasDisability) {
-            disabilityDisplay.style.display = 'block';
-            document.getElementById('disabilityAmount').textContent = formatCurrency(result.disabilityAmount);
-        } else {
-            disabilityDisplay.style.display = 'none';
-        }
-        
-        // Update scenario description
-        const scenarioDesc = GLBI_DATA.reductionRateDescriptions[reductionRate];
-        document.getElementById('scenarioDescription').textContent = scenarioDesc;
-        
-        // Display comparison with provincial support
-        this.displayComparison(province, householdType, result.glbiPayment, annualIncome);
+    updateScenarioDisplay(rate, result, income) {
+        document.getElementById(`total${rate}`).textContent = formatCurrency(result.totalIncome);
+        document.getElementById(`glbi${rate}`).textContent = formatCurrency(result.glbiPayment);
+        document.getElementById(`monthly${rate}`).textContent = formatCurrency(result.monthlyPayment);
     }
 
-    displayComparison(province, householdType, glbiPayment, annualIncome) {
+    updateComparison(province, income) {
         const provincialData = GLBI_DATA.provincialSupport[province];
-        const currentSupport = provincialData[householdType];
-        const difference = glbiPayment - currentSupport;
+        const currentSupport = provincialData[this.currentHouseholdType];
+        
+        // Use 25% scenario for comparison (middle ground)
+        const hasDisability = document.getElementById('hasDisability').checked;
+        const result = this.calculateGLBI(this.currentHouseholdType, income, 25, hasDisability);
+        const difference = result.glbiPayment - currentSupport;
         
         const comparisonHTML = `
             <div class="comparison-item">
                 <div>
-                    <span class="comparison-label">GLBI Annual Payment</span>
-                    <span class="comparison-difference">Federal program</span>
+                    <span class="comparison-label">GLBI Payment (25% scenario)</span>
                 </div>
-                <span class="comparison-value">${formatCurrency(glbiPayment)}</span>
+                <span class="comparison-value">${formatCurrency(result.glbiPayment)}</span>
             </div>
             
             <div class="comparison-item">
                 <div>
                     <span class="comparison-label">Current ${provincialData.name} Support</span>
-                    <span class="comparison-difference">Provincial + Federal programs</span>
                 </div>
                 <span class="comparison-value">${formatCurrency(currentSupport)}</span>
             </div>
             
-            <div class="comparison-item" style="background: ${difference >= 0 ? '#f0fdf4' : '#fef2f2'}; border: 2px solid ${difference >= 0 ? '#059669' : '#dc2626'};">
+            <div class="comparison-item" style="background: ${difference >= 0 ? 'rgba(139, 0, 0, 0.2)' : 'rgba(220, 38, 38, 0.2)'}; border: 2px solid ${difference >= 0 ? 'var(--primary-color)' : '#dc2626'};">
                 <div>
                     <span class="comparison-label">Difference</span>
-                    <span class="comparison-difference ${difference >= 0 ? 'positive' : 'negative'}">
+                    <small style="display: block; color: var(--text-secondary); margin-top: 0.25rem;">
                         ${difference >= 0 ? 'GLBI provides MORE support' : 'Current system provides MORE support'}
-                    </span>
+                    </small>
                 </div>
-                <span class="comparison-value" style="color: ${difference >= 0 ? '#059669' : '#dc2626'}">
+                <span class="comparison-value" style="color: ${difference >= 0 ? 'var(--primary-color)' : '#dc2626'}">
                     ${difference >= 0 ? '+' : ''}${formatCurrency(difference)}
                 </span>
             </div>
             
-            <div style="margin-top: 1rem; padding: 1rem; background: white; border-radius: 0.25rem; border: 1px solid var(--border-color);">
-                <strong style="display: block; margin-bottom: 0.5rem;">Current programs in ${provincialData.name} include:</strong>
-                <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+            <div style="margin-top: 1.5rem; padding: 1rem; background: #1a1a1a; border-radius: 0.375rem;">
+                <strong style="display: block; margin-bottom: 0.75rem; color: var(--text-primary);">Current programs in ${provincialData.name}:</strong>
+                <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8;">
                     ${provincialData.programs.map(program => `<li>${program}</li>`).join('')}
                 </ul>
             </div>
-            
-            ${annualIncome === 0 ? `
-            <div style="margin-top: 1rem; padding: 1rem; background: #eff6ff; border-radius: 0.25rem; border-left: 4px solid var(--primary-color);">
-                <p style="margin: 0; font-size: 0.875rem; color: var(--text-secondary);">
-                    <strong>Note:</strong> This comparison shows the maximum benefit when you have no other income. 
-                    As you earn income, GLBI payments are reduced based on the reduction rate scenario, 
-                    but the disability amount (if applicable) remains constant.
-                </p>
-            </div>
-            ` : ''}
         `;
         
         document.getElementById('comparisonDetails').innerHTML = comparisonHTML;
