@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/bills_view_bill"
                     android:contentDescription="@string/cd_bill_link"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginTop="4dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -67,97 +67,112 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_c223"
+        <!-- Horizontal layout for previous session bills -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardElevation="2dp">
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:baselineAligned="false">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_c223"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="2dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/bills_c223_title"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
-                <TextView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bills_c223_title"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bills_c223_description"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                        android:layout_marginTop="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_view_c223"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bills_view_bill"
+                        android:contentDescription="@string/cd_bill_link"
+                        android:layout_marginTop="4dp"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_s233"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="2dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/bills_c223_description"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                    android:layout_marginTop="4dp" />
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
-                <Button
-                    android:id="@+id/btn_view_c223"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bills_view_bill"
-                    android:contentDescription="@string/cd_bill_link"
-                    android:layout_marginTop="8dp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bills_s233_title"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bills_s233_description"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                        android:layout_marginTop="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_view_s233"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bills_view_bill"
+                        android:contentDescription="@string/cd_bill_link"
+                        android:layout_marginTop="4dp"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_s233"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:clickable="true"
-            android:focusable="true"
             app:cardElevation="2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bills_s233_title"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bills_s233_description"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                    android:layout_marginTop="4dp" />
-
-                <Button
-                    android:id="@+id/btn_view_s233"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bills_view_bill"
-                    android:contentDescription="@string/cd_bill_link"
-                    android:layout_marginTop="8dp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardElevation="2dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -179,7 +194,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/bills_view_guide"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginTop="4dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

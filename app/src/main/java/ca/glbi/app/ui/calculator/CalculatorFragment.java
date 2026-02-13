@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButtonToggleGroup;
@@ -79,7 +79,7 @@ public class CalculatorFragment extends Fragment {
 
     private void setupRecyclerView() {
         adapter = new CalculationResultAdapter();
-        recyclerResults.setLayoutManager(new LinearLayoutManager(requireContext()));
+        recyclerResults.setLayoutManager(new GridLayoutManager(requireContext(), 2));
         recyclerResults.setAdapter(adapter);
     }
 
