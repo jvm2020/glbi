@@ -52,6 +52,7 @@ GLBI Canada is an educational and advocacy app designed to help Canadians unders
 - JDK 8 or later
 - Android SDK with API level 34
 - Gradle 8.0+
+- Internet connection (for initial Gradle and dependency downloads)
 
 ### Building the App
 
@@ -66,6 +67,7 @@ cd glbi
 
 3. Sync Gradle:
    - Android Studio should automatically sync. If not, click "Sync Now" in the notification bar
+   - **Note**: First sync will download Android build tools and dependencies from Maven/Google repositories
 
 4. Build the app:
    - Build → Make Project (Ctrl+F9 / Cmd+F9)
@@ -82,6 +84,21 @@ cd glbi
 # Instrumented tests
 ./gradlew connectedAndroidTest
 ```
+
+### Build Notes
+
+The project uses:
+- Gradle 8.2
+- Android Gradle Plugin 8.1.4
+- Compile SDK 34
+- Min SDK 24
+
+**Network Requirements**: The first build requires internet access to download:
+- Gradle wrapper and build tools
+- Android SDK components
+- Project dependencies (AndroidX, Material Design, GSON, etc.)
+
+After the initial setup, most development can be done offline.
 
 ## Privacy Philosophy
 
