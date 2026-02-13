@@ -28,21 +28,21 @@
     },
     "scenario4": {
       "name": "Graduated Rates",
-      "description": "Progressive clawback rates based on income brackets",
+      "description": "50% on first $20k, 25% on next $30k, 15% thereafter (benefit exhausts ~$79k)",
       "brackets": [
         {
           "minIncome": 0,
-          "maxIncome": 30000,
+          "maxIncome": 20000,
           "rate": 0.50
         },
         {
-          "minIncome": 30000,
+          "minIncome": 20000,
           "maxIncome": 50000,
           "rate": 0.25
         },
         {
           "minIncome": 50000,
-          "maxIncome": 999999,
+          "maxIncome": 146020,
           "rate": 0.15
         }
       ]
