@@ -1,0 +1,83 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-02-19",
+  "dataSource": "PBO Report - February 19, 2025",
+  "dataSourceUrl": "https://www.pbo-dpb.ca/en/publications/RP-2425-029-S--distributional-analysis-national-guaranteed-basic-income-update--analyse-distributive-un-revenu-base-garanti-echelle-nationale-mise-jour",
+  "benefits": {
+    "baseBenefitSingle": 21903,
+    "baseBenefitHousehold": 30975,
+    "currency": "CAD"
+  },
+  "clawbackScenarios": {
+    "scenario1": {
+      "name": "50% Clawback",
+      "rate": 0.50,
+      "description": "Flat 50% clawback rate on all income"
+    },
+    "scenario2": {
+      "name": "25% Clawback",
+      "rate": 0.25,
+      "description": "Flat 25% clawback rate on all income"
+    },
+    "scenario3": {
+      "name": "15% Clawback",
+      "rate": 0.15,
+      "description": "Flat 15% clawback rate on all income"
+    },
+    "scenario4": {
+      "name": "Graduated Rates",
+      "description": "Progressive clawback rates based on income brackets",
+      "brackets": [
+        {
+          "minIncome": 0,
+          "maxIncome": 30000,
+          "rate": 0.50
+        },
+        {
+          "minIncome": 30000,
+          "maxIncome": 50000,
+          "rate": 0.25
+        },
+        {
+          "minIncome": 50000,
+          "maxIncome": 999999,
+          "rate": 0.15
+        }
+      ]
+    }
+  },
+  "parliamentaryLinks": {
+    "currentBills": {
+      "S-206": {
+        "title": "Bill S-206",
+        "session": "44th Parliament, 1st Session",
+        "url": "https://www.parl.ca/legisinfo/en/bill/44-1/s-206",
+        "description": "An Act to develop a national framework for a guaranteed livable basic income"
+      }
+    },
+    "previousBills": {
+      "C-223": {
+        "title": "Bill C-223",
+        "session": "44th Parliament, 1st Session",
+        "url": "https://www.parl.ca/legisinfo/en/bill/44-1/c-223",
+        "description": "National framework for a guaranteed livable basic income"
+      },
+      "S-233": {
+        "title": "Bill S-233",
+        "session": "44th Parliament, 1st Session",
+        "url": "https://www.parl.ca/legisinfo/en/bill/44-1/s-233",
+        "description": "National framework for a guaranteed livable basic income"
+      }
+    },
+    "submission": {
+      "committeePage": "https://www.ourcommons.ca/Committees/en/Home",
+      "clerkInstructions": "https://www.ourcommons.ca/procedure/guides/brief-e.html",
+      "senateCommittees": "https://sencanada.ca/en/committees/"
+    }
+  },
+  "notes": {
+    "disclaimer": "GLBI.ca is not a funded organization or entity. It is solely an advocacy project by Joseph Vander Meer and all opinions thereof are not respective of government bodies.",
+    "calculations": "These calculations are for illustrative purposes only and do not represent official government policy. Base benefit amounts are from the PBO report published on February 19, 2025.",
+    "ccbCppNote": "This calculator does not account for changes to CCB (Canada Child Benefit) or CPP (Canada Pension Plan) benefits."
+  }
+}

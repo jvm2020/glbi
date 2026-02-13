@@ -1,0 +1,114 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">GLBI Canada</string>
+    
+    <!-- Navigation -->
+    <string name="nav_bills">Bills</string>
+    <string name="nav_brief">Brief</string>
+    <string name="nav_calculator">Calculator</string>
+    <string name="nav_about">About</string>
+    
+    <!-- Bills Screen -->
+    <string name="bills_title">Parliamentary Bills</string>
+    <string name="bills_current_title">Current Session</string>
+    <string name="bills_s206_title">Bill S-206</string>
+    <string name="bills_s206_description">An Act to develop a national framework for a guaranteed livable basic income</string>
+    <string name="bills_previous_title">Previous Sessions</string>
+    <string name="bills_c223_title">Bill C-223</string>
+    <string name="bills_c223_description">National framework for a guaranteed livable basic income</string>
+    <string name="bills_s233_title">Bill S-233</string>
+    <string name="bills_s233_description">National framework for a guaranteed livable basic income</string>
+    <string name="bills_view_bill">View Bill</string>
+    <string name="bills_submit_brief_button">Submit a Brief to Parliament</string>
+    <string name="bills_submission_guide_title">How to Submit a Brief</string>
+    <string name="bills_submission_guide_description">Learn about the process for submitting briefs to parliamentary committees.</string>
+    <string name="bills_view_guide">View Submission Guide</string>
+    
+    <!-- Brief Form Screen -->
+    <string name="brief_title">Submit Your Brief</string>
+    <string name="brief_name_label">Name *</string>
+    <string name="brief_name_hint">Your full name</string>
+    <string name="brief_email_label">Email (optional)</string>
+    <string name="brief_email_hint">your.email@example.com</string>
+    <string name="brief_province_label">Province/Territory *</string>
+    <string name="brief_province_hint">Select your province or territory</string>
+    <string name="brief_riding_label">Riding (optional)</string>
+    <string name="brief_riding_hint">Your electoral riding</string>
+    <string name="brief_organization_label">Organization (optional)</string>
+    <string name="brief_organization_hint">Organization name</string>
+    <string name="brief_position_label">Position Statement *</string>
+    <string name="brief_position_hint">Brief summary of your position (1-2 sentences)</string>
+    <string name="brief_text_label">Full Brief *</string>
+    <string name="brief_text_hint">Your detailed brief submission</string>
+    <string name="brief_preview_button">Preview Brief</string>
+    <string name="brief_export_button">Export as PDF</string>
+    <string name="brief_share_button">Share Brief</string>
+    <string name="brief_required_fields">* Required fields</string>
+    <string name="brief_error_required">This field is required</string>
+    <string name="brief_error_email_invalid">Please enter a valid email address</string>
+    <string name="brief_export_success">Brief exported successfully</string>
+    <string name="brief_export_error">Error exporting brief</string>
+    <string name="brief_share_subject">Parliamentary Brief - GLBI Support</string>
+    <string name="brief_share_body">Please find attached my brief in support of Guaranteed Livable Basic Income legislation.</string>
+    
+    <!-- Calculator Screen -->
+    <string name="calculator_title">Scenario Calculator</string>
+    <string name="calculator_age_label">Age</string>
+    <string name="calculator_income_label">Annual Income</string>
+    <string name="calculator_household_label">Household Status</string>
+    <string name="calculator_household_single">Single</string>
+    <string name="calculator_household_family">Household</string>
+    <string name="calculator_disclaimer">Note: This does not change CCB/Child or CPP/Retirement benefits.</string>
+    <string name="calculator_calculate_button">Calculate</string>
+    <string name="calculator_results_title">Scenario Comparison</string>
+    <string name="calculator_scenario1_name">Scenario 1: 50% Clawback</string>
+    <string name="calculator_scenario2_name">Scenario 2: 25% Clawback</string>
+    <string name="calculator_scenario3_name">Scenario 3: 15% Clawback</string>
+    <string name="calculator_scenario4_name">Scenario 4: Graduated Rates</string>
+    <string name="calculator_scenario4_details">0-30k: 50%, 30-50k: 25%, 50k+: 15%</string>
+    <string name="calculator_benefit_label">Net GLBI Benefit</string>
+    <string name="calculator_error_age">Age must be between 15 and 120</string>
+    <string name="calculator_format_currency">$%,d</string>
+    
+    <!-- About Screen -->
+    <string name="about_title">About GLBI Canada</string>
+    <string name="about_version">Version</string>
+    <string name="about_disclaimer_title">Disclaimer</string>
+    <string name="about_disclaimer_text">GLBI.ca is not a funded organization or entity. It is solely an advocacy project by Joseph Vander Meer and all opinions thereof are not respective of government bodies.</string>
+    <string name="about_privacy_title">Privacy</string>
+    <string name="about_privacy_description">This app does not collect or transmit any personal data. All information remains on your device unless you explicitly choose to share or export it.</string>
+    <string name="about_privacy_link">View Privacy Policy</string>
+    <string name="about_licenses_title">Open Source Licenses</string>
+    <string name="about_licenses_link">View Licenses</string>
+    <string name="about_source_code">Source Code</string>
+    <string name="about_source_code_link">github.com/jvm2020/glbi</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="error">Error</string>
+    <string name="loading">Loading…</string>
+    
+    <!-- Content Descriptions (Accessibility) -->
+    <string name="cd_navigation">Navigation</string>
+    <string name="cd_calculator_chart">Bar chart comparing GLBI scenarios</string>
+    <string name="cd_bill_link">Link to parliamentary bill</string>
+    
+    <!-- Provinces -->
+    <string-array name="provinces">
+        <item>Alberta</item>
+        <item>British Columbia</item>
+        <item>Manitoba</item>
+        <item>New Brunswick</item>
+        <item>Newfoundland and Labrador</item>
+        <item>Northwest Territories</item>
+        <item>Nova Scotia</item>
+        <item>Nunavut</item>
+        <item>Ontario</item>
+        <item>Prince Edward Island</item>
+        <item>Quebec</item>
+        <item>Saskatchewan</item>
+        <item>Yukon</item>
+    </string-array>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/billsFragment">
+
+    <fragment
+        android:id="@+id/billsFragment"
+        android:name="ca.glbi.app.ui.bills.BillsFragment"
+        android:label="@string/nav_bills" />
+
+    <fragment
+        android:id="@+id/briefFormFragment"
+        android:name="ca.glbi.app.ui.brief.BriefFormFragment"
+        android:label="@string/nav_brief" />
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="ca.glbi.app.ui.calculator.CalculatorFragment"
+        android:label="@string/nav_calculator" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="ca.glbi.app.ui.about.AboutFragment"
+        android:label="@string/nav_about" />
+
+</navigation>

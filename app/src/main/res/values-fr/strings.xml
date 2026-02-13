@@ -1,0 +1,114 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">RRDB Canada</string>
+    
+    <!-- Navigation -->
+    <string name="nav_bills">Projets de loi</string>
+    <string name="nav_brief">Mémoire</string>
+    <string name="nav_calculator">Calculatrice</string>
+    <string name="nav_about">À propos</string>
+    
+    <!-- Bills Screen -->
+    <string name="bills_title">Projets de loi parlementaires</string>
+    <string name="bills_current_title">Session actuelle</string>
+    <string name="bills_s206_title">Projet de loi S-206</string>
+    <string name="bills_s206_description">Loi visant l\'élaboration d\'un cadre national pour un revenu de base garanti suffisant pour vivre</string>
+    <string name="bills_previous_title">Sessions précédentes</string>
+    <string name="bills_c223_title">Projet de loi C-223</string>
+    <string name="bills_c223_description">Cadre national pour un revenu de base garanti suffisant pour vivre</string>
+    <string name="bills_s233_title">Projet de loi S-233</string>
+    <string name="bills_s233_description">Cadre national pour un revenu de base garanti suffisant pour vivre</string>
+    <string name="bills_view_bill">Voir le projet de loi</string>
+    <string name="bills_submit_brief_button">Soumettre un mémoire au Parlement</string>
+    <string name="bills_submission_guide_title">Comment soumettre un mémoire</string>
+    <string name="bills_submission_guide_description">Renseignez-vous sur le processus de présentation de mémoires aux comités parlementaires.</string>
+    <string name="bills_view_guide">Voir le guide de soumission</string>
+    
+    <!-- Brief Form Screen -->
+    <string name="brief_title">Soumettre votre mémoire</string>
+    <string name="brief_name_label">Nom *</string>
+    <string name="brief_name_hint">Votre nom complet</string>
+    <string name="brief_email_label">Courriel (optionnel)</string>
+    <string name="brief_email_hint">votre.courriel@exemple.com</string>
+    <string name="brief_province_label">Province/Territoire *</string>
+    <string name="brief_province_hint">Sélectionnez votre province ou territoire</string>
+    <string name="brief_riding_label">Circonscription (optionnel)</string>
+    <string name="brief_riding_hint">Votre circonscription électorale</string>
+    <string name="brief_organization_label">Organisation (optionnel)</string>
+    <string name="brief_organization_hint">Nom de l\'organisation</string>
+    <string name="brief_position_label">Énoncé de position *</string>
+    <string name="brief_position_hint">Bref résumé de votre position (1-2 phrases)</string>
+    <string name="brief_text_label">Mémoire complet *</string>
+    <string name="brief_text_hint">Votre mémoire détaillé</string>
+    <string name="brief_preview_button">Aperçu du mémoire</string>
+    <string name="brief_export_button">Exporter en PDF</string>
+    <string name="brief_share_button">Partager le mémoire</string>
+    <string name="brief_required_fields">* Champs obligatoires</string>
+    <string name="brief_error_required">Ce champ est obligatoire</string>
+    <string name="brief_error_email_invalid">Veuillez entrer une adresse courriel valide</string>
+    <string name="brief_export_success">Mémoire exporté avec succès</string>
+    <string name="brief_export_error">Erreur lors de l\'exportation du mémoire</string>
+    <string name="brief_share_subject">Mémoire parlementaire - Soutien au RRDB</string>
+    <string name="brief_share_body">Veuillez trouver ci-joint mon mémoire en soutien à la législation sur le revenu de base garanti suffisant pour vivre.</string>
+    
+    <!-- Calculator Screen -->
+    <string name="calculator_title">Calculatrice de scénarios</string>
+    <string name="calculator_age_label">Âge</string>
+    <string name="calculator_income_label">Revenu annuel</string>
+    <string name="calculator_household_label">Statut du ménage</string>
+    <string name="calculator_household_single">Célibataire</string>
+    <string name="calculator_household_family">Ménage</string>
+    <string name="calculator_disclaimer">Remarque : Ceci ne modifie pas les prestations ACE/Enfant ou RPC/Retraite.</string>
+    <string name="calculator_calculate_button">Calculer</string>
+    <string name="calculator_results_title">Comparaison des scénarios</string>
+    <string name="calculator_scenario1_name">Scénario 1 : Récupération de 50%</string>
+    <string name="calculator_scenario2_name">Scénario 2 : Récupération de 25%</string>
+    <string name="calculator_scenario3_name">Scénario 3 : Récupération de 15%</string>
+    <string name="calculator_scenario4_name">Scénario 4 : Taux gradués</string>
+    <string name="calculator_scenario4_details">0-30k : 50%, 30-50k : 25%, 50k+ : 15%</string>
+    <string name="calculator_benefit_label">Prestation nette RRDB</string>
+    <string name="calculator_error_age">L\'âge doit être entre 15 et 120</string>
+    <string name="calculator_format_currency">%,d $</string>
+    
+    <!-- About Screen -->
+    <string name="about_title">À propos de RRDB Canada</string>
+    <string name="about_version">Version</string>
+    <string name="about_disclaimer_title">Avertissement</string>
+    <string name="about_disclaimer_text">GLBI.ca n\'est pas une organisation ou entité financée. Il s\'agit uniquement d\'un projet de défense de Joseph Vander Meer et toutes les opinions qui y sont exprimées ne représentent pas les organismes gouvernementaux.</string>
+    <string name="about_privacy_title">Confidentialité</string>
+    <string name="about_privacy_description">Cette application ne collecte ni ne transmet aucune donnée personnelle. Toutes les informations restent sur votre appareil, sauf si vous choisissez explicitement de les partager ou de les exporter.</string>
+    <string name="about_privacy_link">Voir la politique de confidentialité</string>
+    <string name="about_licenses_title">Licences open source</string>
+    <string name="about_licenses_link">Voir les licences</string>
+    <string name="about_source_code">Code source</string>
+    <string name="about_source_code_link">github.com/jvm2020/glbi</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="close">Fermer</string>
+    <string name="error">Erreur</string>
+    <string name="loading">Chargement…</string>
+    
+    <!-- Content Descriptions (Accessibility) -->
+    <string name="cd_navigation">Navigation</string>
+    <string name="cd_calculator_chart">Graphique à barres comparant les scénarios RRDB</string>
+    <string name="cd_bill_link">Lien vers le projet de loi parlementaire</string>
+    
+    <!-- Provinces -->
+    <string-array name="provinces">
+        <item>Alberta</item>
+        <item>Colombie-Britannique</item>
+        <item>Manitoba</item>
+        <item>Nouveau-Brunswick</item>
+        <item>Terre-Neuve-et-Labrador</item>
+        <item>Territoires du Nord-Ouest</item>
+        <item>Nouvelle-Écosse</item>
+        <item>Nunavut</item>
+        <item>Ontario</item>
+        <item>Île-du-Prince-Édouard</item>
+        <item>Québec</item>
+        <item>Saskatchewan</item>
+        <item>Yukon</item>
+    </string-array>
+</resources>
