@@ -33,6 +33,11 @@ public class ClawbackCalculator {
      * 0-30k: 50%, 30-50k: 25%, 50k+: 15%
      */
     public static int calculateScenario4(int baseBenefit, int income, GlbiConfig.Bracket[] brackets) {
+        // Handle null or empty brackets array
+        if (brackets == null || brackets.length == 0) {
+            return baseBenefit; // No clawback if brackets are not defined
+        }
+
         int totalClawback = 0;
 
         for (GlbiConfig.Bracket bracket : brackets) {
