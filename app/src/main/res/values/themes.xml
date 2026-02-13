@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.GLBICanada" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/glbi_primary</item>
+        <item name="colorPrimaryVariant">@color/glbi_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/glbi_accent</item>
+        <item name="colorSecondaryVariant">@color/glbi_accent</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/glbi_primary_dark</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+    
+    <style name="Widget.GLBICanada.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.GLBICanada.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.GLBICanada.BottomNavigationView" parent="">
+        <item name="colorPrimary">@color/glbi_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.GLBICanada.NoActionBar" parent="Theme.GLBICanada">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
