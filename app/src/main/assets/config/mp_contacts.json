@@ -1,0 +1,42 @@
+[
+  {
+    "name": "John Sample",
+    "riding": "Sample Riding—Example",
+    "province": "Ontario",
+    "party": "Liberal",
+    "email": "john.sample@parl.gc.ca",
+    "phone": "613-555-0100"
+  },
+  {
+    "name": "Jane Example",
+    "riding": "Example—North",
+    "province": "British Columbia",
+    "party": "Conservative",
+    "email": "jane.example@parl.gc.ca",
+    "phone": "613-555-0101"
+  },
+  {
+    "name": "Robert Placeholder",
+    "riding": "Placeholder—Centre",
+    "province": "Quebec",
+    "party": "Bloc Québécois",
+    "email": "robert.placeholder@parl.gc.ca",
+    "phone": "613-555-0102"
+  },
+  {
+    "name": "Sarah Demo",
+    "riding": "Demo—South",
+    "province": "Alberta",
+    "party": "NDP",
+    "email": "sarah.demo@parl.gc.ca",
+    "phone": "613-555-0103"
+  },
+  {
+    "name": "Michael Test",
+    "riding": "Test—West",
+    "province": "Manitoba",
+    "party": "Liberal",
+    "email": "michael.test@parl.gc.ca",
+    "phone": "613-555-0104"
+  }
+]

@@ -25,4 +25,9 @@
         <item name="colorPrimary">@color/glbi_primary</item>
         <item name="colorOnPrimary">@color/white</item>
     </style>
+
+    <style name="Theme.GLBICanada.NoActionBar" parent="Theme.GLBICanada">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

@@ -3,7 +3,10 @@ package ca.glbi.app.model;
 public class GlbiConfig {
     private String version;
     private String lastUpdated;
+    private String buildDate;
     private String dataSource;
+    private String dataSourceUrl;
+    private String mpDataLastUpdated;
     private Benefits benefits;
     private ClawbackScenarios clawbackScenarios;
     private ParliamentaryLinks parliamentaryLinks;
@@ -189,8 +192,20 @@ public class GlbiConfig {
         return lastUpdated;
     }
 
+    public String getBuildDate() {
+        return buildDate;
+    }
+
     public String getDataSource() {
         return dataSource;
+    }
+
+    public String getDataSourceUrl() {
+        return dataSourceUrl;
+    }
+
+    public String getMpDataLastUpdated() {
+        return mpDataLastUpdated;
     }
 
     public Benefits getBenefits() {

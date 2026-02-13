@@ -13,6 +13,10 @@
         android:icon="@android:drawable/ic_menu_manage"
         android:title="@string/nav_calculator" />
     <item
+        android:id="@+id/mpContactFragment"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="@string/nav_mp_contact" />
+    <item
         android:id="@+id/aboutFragment"
         android:icon="@android:drawable/ic_menu_help"
         android:title="@string/nav_about" />

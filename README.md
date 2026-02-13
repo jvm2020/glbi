@@ -25,14 +25,22 @@ GLBI Canada is an educational and advocacy app designed to help Canadians unders
 - Share briefs via email or other apps
 - All data stays on your device unless you explicitly share
 
-### 3. Scenario Calculator
+### 3. Email Your MP
+- Complete contact list of all Members of Parliament
+- Search and filter MPs by name, riding, or province
+- Email addresses and phone numbers for all MPs
+- Pre-populated email templates for GLBI advocacy
+- Works offline - draft emails and send when connected
+- All MP data stored locally for privacy
+
+### 4. Scenario Calculator
 - Compare 4 different GLBI clawback scenarios
 - Based on 2025 PBO report data (February 19, 2025)
 - Base benefits: Single $21,903, Household $30,975
 - Interactive income slider
 - Side-by-side comparison results
 
-### 4. About & Privacy
+### 5. About & Privacy
 - Full transparency about data handling
 - Version information
 - Disclaimer and license information
@@ -115,13 +123,33 @@ See [PRIVACY.md](PRIVACY.md) for full details.
 
 ## Configuration
 
-The app uses a JSON configuration file at `app/src/main/assets/config/glbi_config.json` that contains:
-- Base benefit amounts
+The app uses JSON configuration files:
+
+### glbi_config.json
+Located at `app/src/main/assets/config/glbi_config.json`, contains:
+- Base benefit amounts (Single: $21,903, Household: $30,975)
 - Clawback scenario definitions
 - Parliamentary bill URLs
 - Submission guidance links
+- Build date and data source dates
 
-This allows updating policy values and links without code changes.
+### mp_contacts.json
+Located at `app/src/main/assets/config/mp_contacts.json`, contains:
+- Complete list of Members of Parliament
+- Contact information (email, phone)
+- Riding and province data
+- Party affiliations
+
+This allows updating policy values, links, and MP information without code changes.
+
+## Splash Screen
+
+The app displays a splash screen on startup showing:
+- Build date
+- PBO data date (benefit amounts source)
+- MP data last updated date
+
+This transparency helps users understand when the data might be outdated.
 
 ## Data Source
 

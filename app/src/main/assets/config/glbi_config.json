@@ -1,8 +1,10 @@
 {
   "version": "1.0.0",
   "lastUpdated": "2025-02-19",
+  "buildDate": "2026-02-13",
   "dataSource": "PBO Report - February 19, 2025",
   "dataSourceUrl": "https://www.pbo-dpb.ca/en/publications/RP-2425-029-S--distributional-analysis-national-guaranteed-basic-income-update--analyse-distributive-un-revenu-base-garanti-echelle-nationale-mise-jour",
+  "mpDataLastUpdated": "2026-02-13",
   "benefits": {
     "baseBenefitSingle": 21903,
     "baseBenefitHousehold": 30975,

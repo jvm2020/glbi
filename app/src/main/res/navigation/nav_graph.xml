@@ -20,6 +20,11 @@
         android:label="@string/nav_calculator" />
 
     <fragment
+        android:id="@+id/mpContactFragment"
+        android:name="ca.glbi.app.ui.mpcontact.MPContactFragment"
+        android:label="@string/nav_mp_contact" />
+
+    <fragment
         android:id="@+id/aboutFragment"
         android:name="ca.glbi.app.ui.about.AboutFragment"
         android:label="@string/nav_about" />

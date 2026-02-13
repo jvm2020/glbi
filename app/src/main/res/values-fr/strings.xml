@@ -6,6 +6,7 @@
     <string name="nav_bills">Projets de loi</string>
     <string name="nav_brief">Mémoire</string>
     <string name="nav_calculator">Calculatrice</string>
+    <string name="nav_mp_contact">Contacter député</string>
     <string name="nav_about">À propos</string>
     
     <!-- Bills Screen -->
@@ -70,6 +71,28 @@
     <string name="calculator_error_age">L\'âge doit être entre 15 et 120</string>
     <string name="calculator_format_currency">%,d $</string>
     
+    <!-- MP Contact Screen -->
+    <string name="mp_contact_title">Contacter votre député</string>
+    <string name="mp_contact_search_hint">Rechercher par nom, circonscription ou province</string>
+    <string name="mp_contact_filter_province">Filtrer par province</string>
+    <string name="mp_contact_filter_all">Toutes les provinces</string>
+    <string name="mp_contact_mp_name">Nom du député</string>
+    <string name="mp_contact_riding">Circonscription</string>
+    <string name="mp_contact_party">Parti</string>
+    <string name="mp_contact_email">Courriel</string>
+    <string name="mp_contact_phone">Téléphone</string>
+    <string name="mp_contact_email_button">Envoyer un courriel</string>
+    <string name="mp_contact_find_my_mp">Trouver mon député</string>
+    <string name="mp_contact_enter_postal">Entrez votre code postal</string>
+    <string name="mp_contact_postal_hint">A1A 1A1</string>
+    <string name="mp_contact_lookup">Rechercher</string>
+    <string name="mp_contact_template_title">Modèle de courriel</string>
+    <string name="mp_contact_use_template">Utiliser le modèle</string>
+    <string name="mp_contact_template_subject">Soutien au revenu de base garanti suffisant pour vivre (projet de loi S-206)</string>
+    <string name="mp_contact_template_body">Cher/Chère [Nom du député],\n\nJe vous écris en tant qu\'électeur de votre circonscription pour exprimer mon soutien au projet de loi S-206, qui établirait un cadre national pour un revenu de base garanti suffisant pour vivre.\n\nUn revenu de base garanti suffisant pour vivre permettrait de :\n• Réduire la pauvreté et les inégalités\n• Assurer la sécurité économique de tous les Canadiens\n• Simplifier les programmes de soutien social\n• Soutenir la reprise et la résilience économiques\n\nJe vous exhorte à soutenir le projet de loi S-206 et à plaider en faveur de la mise en œuvre d\'un cadre de revenu de base garanti suffisant pour vivre au Canada.\n\nJe vous remercie de votre attention à cette question importante.\n\nCordialement,\n[Votre nom]\n[Votre ville], [Province]</string>
+    <string name="mp_contact_offline_note">Toutes les coordonnées des députés sont stockées localement. Vous pouvez rédiger des courriels hors ligne et les envoyer une fois connecté.</string>
+    <string name="mp_contact_data_source">Données des députés de la Chambre des communes (mises à jour régulièrement)</string>
+    
     <!-- About Screen -->
     <string name="about_title">À propos de RRDB Canada</string>
     <string name="about_version">Version</string>
@@ -89,6 +112,14 @@
     <string name="close">Fermer</string>
     <string name="error">Erreur</string>
     <string name="loading">Chargement…</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_title">RRDB Canada</string>
+    <string name="splash_subtitle">Défense du revenu de base garanti suffisant pour vivre</string>
+    <string name="splash_build_date">Date de compilation : %s</string>
+    <string name="splash_pbo_data">Données DPB : %s</string>
+    <string name="splash_mp_data">Données députés : %s</string>
+    <string name="splash_disclaimer">Les données peuvent devenir obsolètes. Vérifiez les sources récentes dans l\'app.</string>
     
     <!-- Content Descriptions (Accessibility) -->
     <string name="cd_navigation">Navigation</string>

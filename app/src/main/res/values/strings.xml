@@ -6,6 +6,7 @@
     <string name="nav_bills">Bills</string>
     <string name="nav_brief">Brief</string>
     <string name="nav_calculator">Calculator</string>
+    <string name="nav_mp_contact">Email MP</string>
     <string name="nav_about">About</string>
     
     <!-- Bills Screen -->
@@ -70,6 +71,28 @@
     <string name="calculator_error_age">Age must be between 15 and 120</string>
     <string name="calculator_format_currency">$%,d</string>
     
+    <!-- MP Contact Screen -->
+    <string name="mp_contact_title">Email Your MP</string>
+    <string name="mp_contact_search_hint">Search by name, riding, or province</string>
+    <string name="mp_contact_filter_province">Filter by Province</string>
+    <string name="mp_contact_filter_all">All Provinces</string>
+    <string name="mp_contact_mp_name">MP Name</string>
+    <string name="mp_contact_riding">Riding</string>
+    <string name="mp_contact_party">Party</string>
+    <string name="mp_contact_email">Email</string>
+    <string name="mp_contact_phone">Phone</string>
+    <string name="mp_contact_email_button">Email MP</string>
+    <string name="mp_contact_find_my_mp">Find My MP</string>
+    <string name="mp_contact_enter_postal">Enter your postal code</string>
+    <string name="mp_contact_postal_hint">A1A 1A1</string>
+    <string name="mp_contact_lookup">Look Up</string>
+    <string name="mp_contact_template_title">Email Template</string>
+    <string name="mp_contact_use_template">Use Template</string>
+    <string name="mp_contact_template_subject">Support for Guaranteed Livable Basic Income (Bill S-206)</string>
+    <string name="mp_contact_template_body">Dear [MP Name],\n\nI am writing to you as your constituent to express my support for Bill S-206, which would establish a national framework for a guaranteed livable basic income.\n\nA guaranteed livable basic income would:\n• Reduce poverty and inequality\n• Provide economic security for all Canadians\n• Simplify social support programs\n• Support economic recovery and resilience\n\nI urge you to support Bill S-206 and advocate for the implementation of a guaranteed livable basic income framework in Canada.\n\nThank you for your attention to this important issue.\n\nSincerely,\n[Your Name]\n[Your City/Town], [Province]</string>
+    <string name="mp_contact_offline_note">All MP contact information is stored locally. You can draft emails offline and send when connected.</string>
+    <string name="mp_contact_data_source">MP data from House of Commons (updated regularly)</string>
+    
     <!-- About Screen -->
     <string name="about_title">About GLBI Canada</string>
     <string name="about_version">Version</string>
@@ -89,6 +112,14 @@
     <string name="close">Close</string>
     <string name="error">Error</string>
     <string name="loading">Loading…</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_title">GLBI Canada</string>
+    <string name="splash_subtitle">Advocacy for Guaranteed Livable Basic Income</string>
+    <string name="splash_build_date">Build Date: %s</string>
+    <string name="splash_pbo_data">PBO Data: %s</string>
+    <string name="splash_mp_data">MP Data: %s</string>
+    <string name="splash_disclaimer">Data may become outdated. Check app info for latest sources.</string>
     
     <!-- Content Descriptions (Accessibility) -->
     <string name="cd_navigation">Navigation</string>
