@@ -112,9 +112,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bills_view_bill"
                         android:contentDescription="@string/cd_bill_link"
-                        android:layout_marginTop="4dp"
-                        android:paddingStart="0dp"
-                        android:paddingEnd="0dp" />
+                        android:layout_marginTop="4dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -155,9 +153,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bills_view_bill"
                         android:contentDescription="@string/cd_bill_link"
-                        android:layout_marginTop="4dp"
-                        android:paddingStart="0dp"
-                        android:paddingEnd="0dp" />
+                        android:layout_marginTop="4dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
