@@ -28,7 +28,7 @@
     },
     "scenario4": {
       "name": "Graduated Rates",
-      "description": "50% on first $20k, 25% on $20k-$50k, 15% thereafter",
+      "description": "50% on first $20k, 25% on next $30k, 15% thereafter (benefit exhausts ~$79k)",
       "brackets": [
         {
           "minIncome": 0,
