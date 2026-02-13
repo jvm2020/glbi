@@ -137,7 +137,7 @@ This pull request implements a complete Android application for Guaranteed Livab
 - **UI**: Material Design 3
 - **Navigation**: Navigation Component
 - **Data**: GSON for JSON parsing
-- **Build**: Gradle 8.2, AGP 8.1.4
+- **Build**: Gradle 9.0-milestone-1, AGP 8.1.4
 
 ### File Statistics
 
