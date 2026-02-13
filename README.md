@@ -49,9 +49,9 @@ GLBI Canada is an educational and advocacy app designed to help Canadians unders
 
 ### Prerequisites
 - Android Studio Arctic Fox (2020.3.1) or later
-- JDK 8 or later
+- JDK 8 or later (JDK 21 recommended for full compatibility)
 - Android SDK with API level 34
-- Gradle 8.0+
+- Gradle 9.0-milestone-1 (automatically downloaded by wrapper)
 - Internet connection (for initial Gradle and dependency downloads)
 
 ### Building the App
@@ -88,7 +88,7 @@ cd glbi
 ### Build Notes
 
 The project uses:
-- Gradle 8.2
+- Gradle 9.0-milestone-1
 - Android Gradle Plugin 8.1.4
 - Compile SDK 34
 - Min SDK 24
@@ -120,7 +120,7 @@ See [PRIVACY.md](PRIVACY.md) for full details.
 - **Language**: Java 8
 - **Min SDK**: 24 (Android 7.0)
 - **Target SDK**: 34 (Android 14)
-- **Build System**: Gradle with Android Gradle Plugin 8.2.0
+- **Build System**: Gradle 9.0-milestone-1 with Android Gradle Plugin 8.1.4
 
 ### Libraries & Dependencies
 - AndroidX AppCompat
